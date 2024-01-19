@@ -157,6 +157,7 @@ MonoBehaviour:
     serializedVersion: 2
     m_Bits: 64
   jumpForce: 300
+  tr: {fileID: 0}
 --- !u!114 &3876008868847066709
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -169,6 +170,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 1883f4f2637452846880ab9dfcf4a1cc, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  pillsText: {fileID: 0}
 --- !u!1 &3309304011063185980
 GameObject:
   m_ObjectHideFlags: 0

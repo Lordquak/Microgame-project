@@ -12,6 +12,12 @@ public class PlayerController : MonoBehaviour
     public LayerMask groundLayer;
     [SerializeField] float jumpForce = 300f;
 
+    private bool dashing = true;
+    public float dashingPower = 20f;
+
+    [SerializeField] private TrailRenderer tr;
+
+
     void Start()
     {
         myRigidbody = GetComponent<Rigidbody>();
@@ -31,8 +37,12 @@ public class PlayerController : MonoBehaviour
             myRigidbody.AddForce(transform.up * jumpForce);
         }
 
-       
+       if (Input.GetKey(KeyCode.LeftShift) && isOnGround)
+        {
+            myRigidbody.velocity = new Vector3(transform.forward.x * dashingPower, 0f, transform.forward.z * dashingPower);
+        }
 
        
     }
+
 }
