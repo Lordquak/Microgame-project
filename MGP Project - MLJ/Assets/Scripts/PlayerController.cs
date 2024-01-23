@@ -12,7 +12,6 @@ public class PlayerController : MonoBehaviour
     public LayerMask groundLayer;
     [SerializeField] float jumpForce = 300f;
 
-    private bool dashing = true;
     public float dashingPower = 20f;
 
     [SerializeField] private TrailRenderer tr;
