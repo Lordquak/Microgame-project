@@ -18,14 +18,4 @@ public class ItemCollector : MonoBehaviour
             pillsText.text = "Pills: " + pills;
         }
     }
-
-    private void Update()
-    {
-        GameObject.FindGameObjectWithTag("Teleport");
-
-        if (Input.GetKey(KeyCode.E) && pills > 0)
-        {
-
-        }
-    }
 }
