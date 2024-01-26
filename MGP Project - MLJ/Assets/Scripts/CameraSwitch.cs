@@ -14,12 +14,10 @@ public class CameraSwitch : MonoBehaviour
         {
             cam1.SetActive(false);
             cam2.SetActive(true);
+
+
         }
 
-        if (Input.GetButtonDown("Key2"))
-        {
-            cam1.SetActive(true);
-            cam2.SetActive(false);
-        }
+       
     }
 }
