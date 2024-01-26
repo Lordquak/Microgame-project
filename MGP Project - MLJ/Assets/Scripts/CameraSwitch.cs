@@ -10,6 +10,8 @@ public class CameraSwitch : MonoBehaviour
     public float gtime;
     public float mtime;
 
+    public ItemCollector counter;
+
     void Update()
     {
         if (0f<timer)
@@ -23,7 +25,7 @@ public class CameraSwitch : MonoBehaviour
         }
         else
         {
-            if (Input.GetKeyDown(KeyCode.E))
+            if (Input.GetKeyDown(KeyCode.E) && counter.pills>0)
             {
                 timer = gtime;
                 gtime -= 0.5f;
@@ -40,10 +42,3 @@ public class CameraSwitch : MonoBehaviour
        
     }
 }
-/*if (Input.GetButtonDown("Key1"))
-{
-    cam1.SetActive(false);
-    cam2.SetActive(true);
-
-
-}*/

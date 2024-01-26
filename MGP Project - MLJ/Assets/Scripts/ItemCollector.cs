@@ -5,7 +5,7 @@ using UnityEngine.UI;
 
 public class ItemCollector : MonoBehaviour
 {
-    int pills = 0;
+    public int pills = 0;
 
     [SerializeField] Text pillsText;
 

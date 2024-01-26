@@ -15,6 +15,7 @@ public class PlayerController : MonoBehaviour
     public float dashingPower = 20f;
     private bool dash;
 
+    public Vector2 bdash;
 
     void Start()
     {
@@ -37,13 +38,20 @@ public class PlayerController : MonoBehaviour
 
        if (Input.GetKey(KeyCode.LeftShift) && isOnGround && !dash)
         {
-            myRigidbody.velocity = new Vector3(transform.forward.x * dashingPower, 0f, transform.forward.z * dashingPower);
+            bdash.x = horizontalInput;
+            bdash.y = verticalInput;
+
+            myRigidbody.velocity = new Vector3(bdash.x * dashingPower, 0f, bdash.y * dashingPower);
 
             dash = true;
         }
-        else if (Input.GetKey(KeyCode.LeftShift))
+        else if (Input.GetKey(KeyCode.LeftShift) && dash)
         {
-
+            myRigidbody.velocity = new Vector3(bdash.x * dashingPower, 0f, bdash.y * dashingPower);
+        }
+       else if (!Input.GetKey(KeyCode.LeftShift) && dash)
+        {
+            dash = false;
         }
 
        
