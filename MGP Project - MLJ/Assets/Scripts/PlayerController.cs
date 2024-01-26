@@ -13,8 +13,7 @@ public class PlayerController : MonoBehaviour
     [SerializeField] float jumpForce = 300f;
 
     public float dashingPower = 20f;
-
-    [SerializeField] private TrailRenderer tr;
+    private bool dash;
 
 
     void Start()
@@ -36,9 +35,15 @@ public class PlayerController : MonoBehaviour
             myRigidbody.AddForce(transform.up * jumpForce);
         }
 
-       if (Input.GetKey(KeyCode.LeftShift) && isOnGround)
+       if (Input.GetKey(KeyCode.LeftShift) && isOnGround && !dash)
         {
             myRigidbody.velocity = new Vector3(transform.forward.x * dashingPower, 0f, transform.forward.z * dashingPower);
+
+            dash = true;
+        }
+        else if (Input.GetKey(KeyCode.LeftShift))
+        {
+
         }
 
        
