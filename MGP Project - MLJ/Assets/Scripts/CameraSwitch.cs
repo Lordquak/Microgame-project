@@ -29,6 +29,7 @@ public class CameraSwitch : MonoBehaviour
             {
                 timer = gtime;
                 gtime -= 0.5f;
+                counter.pills -= 1;
 
                 if (gtime < mtime)
                 {
