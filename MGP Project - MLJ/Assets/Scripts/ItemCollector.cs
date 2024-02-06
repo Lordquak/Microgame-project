@@ -18,4 +18,12 @@ public class ItemCollector : MonoBehaviour
             pillsText.text = "Pills: " + pills;
         }
     }
+
+   void Update()
+    {
+        if (Input.GetKeyDown(KeyCode.E))
+        {
+            pillsText.text = "Pills: " + pills;
+        }
+    }
 }
