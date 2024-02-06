@@ -12,6 +12,13 @@ public class CameraSwitch : MonoBehaviour
 
     public ItemCollector counter;
 
+    private void Start()
+    {
+        cam1.SetActive(false);
+        cam2.SetActive(true);
+        timer = 5.0f;
+    }
+
     void Update()
     {
         if (0f<timer)

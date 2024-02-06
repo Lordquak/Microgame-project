@@ -10,7 +10,6 @@ public class PlayerController : MonoBehaviour
     bool isOnGround;
     public GameObject groundChecker;
     public LayerMask groundLayer;
-    [SerializeField] float jumpForce = 300f;
 
     public float dashingPower = 20f;
     private bool dash;
@@ -31,10 +30,6 @@ public class PlayerController : MonoBehaviour
         
         isOnGround = Physics.CheckSphere(groundChecker.transform.position, 0.1f, groundLayer);
 
-        if (isOnGround == true && Input.GetKeyDown(KeyCode.Space))
-        {
-            myRigidbody.AddForce(transform.up * jumpForce);
-        }
 
        if (Input.GetKey(KeyCode.LeftShift) && isOnGround && !dash)
         {
