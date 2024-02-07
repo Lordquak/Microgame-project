@@ -27,8 +27,9 @@ public class PlayerController : MonoBehaviour
         float verticalInput = Input.GetAxis("Vertical");
 
         myRigidbody.velocity = new Vector3 (horizontalInput * maxSpeed, myRigidbody.velocity.y, verticalInput * maxSpeed);
-
+        
         isOnGround = Physics.CheckSphere(groundChecker.transform.position, 0.1f, groundLayer);
+
 
        if (Input.GetKey(KeyCode.LeftShift) && isOnGround && !dash)
         {
