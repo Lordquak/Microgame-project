@@ -19,7 +19,7 @@ public class ItemCollector : MonoBehaviour
         }
     }
 
-    void Update()
+   void Update()
     {
         if (Input.GetKeyDown(KeyCode.E))
         {

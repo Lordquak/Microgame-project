@@ -5,17 +5,12 @@ using UnityEngine.SceneManagement;
 
 public class Finish : MonoBehaviour
 {
-
     private void OnTriggerEnter(Collider other)
     {
-        if (other.gameObject.name == "End")
+        if (other.gameObject.CompareTag("Finish"))
         {
-            SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex + 1);
+            SceneManager.LoadScene("EndScreen");
         }
+        
     }
-
-    /*public void LoadScene(string sceneName)
-    {
-        SceneManager.LoadScene(sceneName);
-    }*/
 }
