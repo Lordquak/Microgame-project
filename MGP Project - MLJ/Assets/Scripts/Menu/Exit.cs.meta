@@ -1,5 +1,9 @@
 fileFormatVersion: 2
-guid: eddcdce6f4f72504ea4616f3bf7179c3
+<<<<<<<< HEAD:MGP Project - MLJ/Assets/Scripts/Menu/Exit.cs.meta
+guid: 22291e7b7f08f6c42981276cb0107dba
+========
+guid: c278fbfdb8160c04f8d4ed235c41364f
+>>>>>>>> 5c97427952d66861b382b298057a1d0b62c1b442:MGP Project - MLJ/Assets/Scripts/Menu/SceneMan.cs.meta
 MonoImporter:
   externalObjects: {}
   serializedVersion: 2
