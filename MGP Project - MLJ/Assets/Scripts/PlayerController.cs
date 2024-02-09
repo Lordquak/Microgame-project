@@ -6,7 +6,7 @@ public class PlayerController : MonoBehaviour
 {
    [SerializeField] float  maxSpeed = 1.0f;
     Rigidbody myRigidbody;
-    Animator myAnimator;
+    public Animator myAnimator;
 
     bool isOnGround;
     public GameObject groundChecker;
@@ -19,7 +19,7 @@ public class PlayerController : MonoBehaviour
 
     void Start()
     {
-        myAnimator = GetComponentInChildren<Animator>();
+        /*myAnimator = GetComponentInChildren<Animator>();*/
 
         myRigidbody = GetComponent<Rigidbody>();
     }
@@ -52,7 +52,9 @@ public class PlayerController : MonoBehaviour
         }
 
         myAnimator.SetFloat("speed", myRigidbody.velocity.magnitude);
-       
+
+        myAnimator.SetBool("Dash", dash);
+
     }
 
 }
