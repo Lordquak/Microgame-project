@@ -15,7 +15,7 @@ public class ItemCollector : MonoBehaviour
         {
             Destroy(other.gameObject);
             pills++;
-            pillsText.text = "Pills: " + pills;
+            pillsText.text = "Pills (Press E to use pill): " + pills;
         }
     }
 
