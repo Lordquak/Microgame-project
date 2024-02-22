@@ -11972,7 +11972,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 2ff669359d828e640a75aa27930eb99c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  timer: 10
+  timer: 15
   min: 5
 --- !u!1 &1688037845 stripped
 GameObject:
@@ -13387,7 +13387,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: 003c1e13acf0ac74c9428c355791d7ae, type: 3}
       propertyPath: m_LocalPosition.y
-      value: 0
+      value: -5
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: 003c1e13acf0ac74c9428c355791d7ae, type: 3}
       propertyPath: m_LocalPosition.z
@@ -17906,6 +17906,23 @@ MeshCollider:
   m_Convex: 0
   m_CookingOptions: 30
   m_Mesh: {fileID: 1595783810130990727, guid: 003c1e13acf0ac74c9428c355791d7ae, type: 3}
+--- !u!1 &2013308207 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 4017742620184578, guid: 5d43dbec0e1e0fc449f9173d2fc6b5a9, type: 3}
+  m_PrefabInstance: {fileID: 2099152546}
+  m_PrefabAsset: {fileID: 0}
+--- !u!114 &2013308210
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2013308207}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 28a17d7a9e28b6741a2bf08e876e7861, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &2023697483 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: -770460334288411547, guid: 003c1e13acf0ac74c9428c355791d7ae, type: 3}
@@ -18571,7 +18588,10 @@ PrefabInstance:
     - targetCorrespondingSourceObject: {fileID: 9209758054146837049, guid: 5d43dbec0e1e0fc449f9173d2fc6b5a9, type: 3}
       insertIndex: -1
       addedObject: {fileID: 169995907}
-    m_AddedComponents: []
+    m_AddedComponents:
+    - targetCorrespondingSourceObject: {fileID: 4017742620184578, guid: 5d43dbec0e1e0fc449f9173d2fc6b5a9, type: 3}
+      insertIndex: 5
+      addedObject: {fileID: 2013308210}
   m_SourcePrefab: {fileID: 100100000, guid: 5d43dbec0e1e0fc449f9173d2fc6b5a9, type: 3}
 --- !u!1 &2100401130 stripped
 GameObject:

@@ -15,9 +15,7 @@ public class PlayerController : MonoBehaviour
 
 
     void Start()
-    {
-        /*myAnimator = GetComponentInChildren<Animator>();*/
-
+    { 
         myRigidbody = GetComponent<Rigidbody>();
     }
 
