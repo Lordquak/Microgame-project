@@ -18,7 +18,7 @@ public class TeleportPostToAp : MonoBehaviour
 
     void Update()
     {
-        positionPost = new Vector3(transform.position.x, transform.position.y * 2.0f, transform.position.z);
+        positionPost = new Vector3(transform.position.x, transform.position.y, transform.position.z);
     }
 }
  

@@ -28,8 +28,11 @@ public class PlayerController : MonoBehaviour
 
         isOnGround = Physics.CheckSphere(groundChecker.transform.position, 0.1f, groundLayer);
 
+        myAnimator.SetBool("isOnGround", isOnGround);
+
         if (isOnGround == true && Input.GetKeyDown(KeyCode.Space))
         {
+            myAnimator.SetTrigger("jumped");
             myRigidbody.AddForce(transform.up * jumpForce);
         }
     }
