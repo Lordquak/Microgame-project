@@ -6,8 +6,13 @@ using UnityEngine.SceneManagement;
 public class Timer : MonoBehaviour
 {
     public float timer;
-    public float min = 5f;
-    
+    public float min = 5.0f;
+
+    private void Start()
+    {
+        timer -= min;
+    }
+
     void Update()
     {
         if (timer > 0)

@@ -11,50 +11,26 @@ public class PlayerController : MonoBehaviour
     bool isOnGround;
     public GameObject groundChecker;
     public LayerMask groundLayer;
+    public float jumpForce = 50.0f;
 
-    public float dashingPower = 20f;
-    private bool dash;
-
-    public Vector2 bdash;
 
     void Start()
-    {
-        /*myAnimator = GetComponentInChildren<Animator>();*/
-
+    { 
         myRigidbody = GetComponent<Rigidbody>();
     }
 
     void Update()
     {
-         float horizontalInput = Input.GetAxis("Horizontal");
+        float horizontalInput = Input.GetAxis("Horizontal");
         float verticalInput = Input.GetAxis("Vertical");
 
-        myRigidbody.velocity = new Vector3 (horizontalInput * maxSpeed, myRigidbody.velocity.y, verticalInput * maxSpeed);
+        myRigidbody.velocity = new Vector3(horizontalInput * maxSpeed, myRigidbody.velocity.y, verticalInput * maxSpeed);
 
         isOnGround = Physics.CheckSphere(groundChecker.transform.position, 0.1f, groundLayer);
 
-       if (Input.GetKey(KeyCode.LeftShift) && isOnGround && !dash)
+        if (isOnGround == true && Input.GetKeyDown(KeyCode.Space))
         {
-            bdash.x = horizontalInput;
-            bdash.y = verticalInput;
-
-            myRigidbody.velocity = new Vector3(bdash.x * dashingPower, 0f, bdash.y * dashingPower);
-
-            dash = true;
+            myRigidbody.AddForce(transform.up * jumpForce);
         }
-        else if (Input.GetKey(KeyCode.LeftShift) && dash)
-        {
-            myRigidbody.velocity = new Vector3(bdash.x * dashingPower, 0f, bdash.y * dashingPower);
-        }
-       else if (!Input.GetKey(KeyCode.LeftShift) && dash)
-        {
-            dash = false;
-        }
-
-        myAnimator.SetFloat("speed", myRigidbody.velocity.magnitude);
-
-        myAnimator.SetBool("Dash", dash);
-
     }
-
 }
